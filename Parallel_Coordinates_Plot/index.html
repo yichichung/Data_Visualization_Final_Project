@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parallel Coordinates</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      #controls {
+        margin: 20px;
+      }
+      #legend {
+        margin: 20px auto;
+        width: 800px;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 14px;
+      }
+      .legend-item {
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+      }
+      .legend-color {
+        width: 15px;
+        height: 15px;
+        margin-right: 5px;
+        border: 1px solid #000;
+      }
+      svg {
+        display: block;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="controls">
+      <label for="attribute">Select Attribute:</label>
+      <select id="attribute">
+        <option value="Male">Gender</option>
+        <option value="Stat_expri">Stat_expri</option>
+        <option value="Difficulty">Difficulty</option>
+      </select>
+      <button id="update">Update Visualization</button>
+    </div>
+
+    <div id="legend"></div>
+
+    <svg id="parallel-coordinates" width="800" height="500"></svg>
+
+    <script>
+      // Load data from CSV
+      d3.csv("data_modified.csv").then(function (data) {
+        const margin = { top: 50, right: 50, bottom: 50, left: 50 };
+        const width = 800 - margin.left - margin.right;
+        const height = 500 - margin.top - margin.bottom;
+
+        const svg = d3
+          .select("#parallel-coordinates")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+          .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+        const dimensions = ["stat_anxiety_Post", "stat_SelEffi_Post", "Score"];
+
+        // Ensure data consistency by converting strings to numbers and handling NaN values
+        data.forEach((row) => {
+          dimensions.forEach((dim) => {
+            row[dim] = +row[dim]; // Convert to number
+            if (isNaN(row[dim])) {
+              row[dim] = 0; // Replace NaN with 0 or another fallback value
+            }
+          });
+        });
+
+        const yScales = {};
+        dimensions.forEach((d) => {
+          yScales[d] = d3
+            .scaleLinear()
+            .domain(d3.extent(data, (row) => row[d]))
+            .range([height, 0]);
+        });
+
+        const xScale = d3.scalePoint().domain(dimensions).range([0, width]);
+
+        function path(row) {
+          return d3.line()(
+            dimensions.map((p) => [xScale(p), yScales[p](row[p])])
+          );
+        }
+
+        function update(attribute) {
+          const colorScale = d3
+            .scaleOrdinal(d3.schemeCategory10)
+            .domain(data.map((row) => row[attribute]));
+
+          svg.selectAll(".path-group").remove();
+
+          svg
+            .append("g")
+            .attr("class", "path-group")
+            .selectAll("path")
+            .data(data)
+            .enter()
+            .append("path")
+            .attr("d", path)
+            .attr("stroke", (row) => colorScale(row[attribute]))
+            .attr("fill", "none")
+            .attr("opacity", 0.7)
+            .attr("stroke-width", 1.5);
+
+          svg.selectAll(".axis").remove();
+
+          dimensions.forEach((d, i) => {
+            svg
+              .append("g")
+              .attr("class", "axis")
+              .attr("transform", `translate(${xScale(d)}, 0)`)
+              .call(d3.axisLeft(yScales[d]));
+
+            svg
+              .append("text")
+              .attr("x", xScale(d))
+              .attr("y", -10)
+              .attr("text-anchor", "middle")
+              .style("font-size", "12px")
+              .text(d);
+          });
+
+          // Update legend
+          const legend = d3.select("#legend");
+          legend.selectAll(".legend-item").remove();
+
+          const uniqueValues = Array.from(
+            new Set(data.map((row) => row[attribute]))
+          );
+
+          uniqueValues.forEach((value) => {
+            const item = legend.append("div").attr("class", "legend-item");
+            item
+              .append("div")
+              .attr("class", "legend-color")
+              .style("background-color", colorScale(value));
+            item.append("span").text(value);
+          });
+        }
+
+        update("Male"); // Initial render with Gender
+
+        d3.select("#update").on("click", function () {
+          const selectedAttribute = d3.select("#attribute").property("value");
+          update(selectedAttribute);
+        });
+      });
+    </script>
+  </body>
+</html>
