@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ranked Horizontal Bar Chart with Percentages</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <svg width="700" height="500"></svg>
+  <div id="controls">
+    <button id="toggle-btn">
+      <img id="toggle-img" src="play.png" alt="Play">
+    </button>
+    <div id="progress-bar">
+      <div id="progress"></div>
+    </div>
+    <span id="seq-display">Seq: 0</span>
+  </div>
+
+  <script>
+    const svg = d3.select("svg");
+    const width = 700;
+    const height = 500;
+    const margin = { top: 20, right: 20, bottom: 20, left: 150 };
+
+    const chartWidth = width - margin.left - margin.right;
+    const chartHeight = height - margin.top - margin.bottom;
+
+    const colors = {
+      Work_Analysis: "steelblue",
+      Work_Mixed: "orange",
+      Work_Sheet: "green",
+      Search_Mixed: "#264653",
+      Search_GAI: "#e76f51",
+      Search_Browser: "#2a9d8f"
+    };
+
+    const xScale = d3.scaleLinear().range([0, chartWidth]);
+    const yScale = d3.scaleBand().range([0, chartHeight]).padding(0.2);
+
+    const chart = svg.append("g")
+      .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+    const toggleImg = d3.select("#toggle-img");
+    const progressBar = d3.select("#progress-bar");
+    const progressIndicator = d3.select("#progress");
+    const toggleButton = d3.select("#toggle-btn");
+    const seqDisplay = d3.select("#seq-display");
+
+    let maxGlobalValue = 0;
+    let seqIndex = 0;
+    let interval;
+    let isPlaying = false;
+
+    d3.json("cumulative_percent.json").then(data => {
+      // 计算所有数据的最大值
+      data.forEach(seq => {
+        Object.keys(seq).forEach(key => {
+          if (key !== "seq") {
+            maxGlobalValue = Math.max(maxGlobalValue, seq[key]);
+          }
+        });
+      });
+
+      xScale.domain([0, maxGlobalValue]);
+
+      function update(seqIndex) {
+        const keys = Object.keys(data[seqIndex]).filter(key => key !== "seq");
+        const aggregatedData = keys.map(key => ({
+          key: key,
+          value: data[seqIndex][key]
+        })).sort((a, b) => b.value - a.value);
+
+        yScale.domain(aggregatedData.map(d => d.key));
+
+        // 更新条形图
+        const bars = chart.selectAll(".bar")
+          .data(aggregatedData, d => d.key);
+
+        bars.enter()
+          .append("rect")
+          .attr("class", "bar")
+          .attr("x", 0)
+          .attr("y", d => yScale(d.key))
+          .attr("width", 0)
+          .attr("height", yScale.bandwidth())
+          .attr("fill", d => colors[d.key])
+          .merge(bars)
+          .transition()
+          .duration(1000)
+          .attr("x", 0)
+          .attr("y", d => yScale(d.key))
+          .attr("width", d => xScale(d.value))
+          .attr("height", yScale.bandwidth());
+
+        bars.exit().remove();
+
+        // 更新条形内的百分比标签
+        const percentLabels = chart.selectAll(".bar-label")
+          .data(aggregatedData, d => d.key);
+
+        percentLabels.enter()
+          .append("text")
+          .attr("class", "bar-label")
+          .attr("x", 0)
+          .attr("y", d => yScale(d.key) + yScale.bandwidth() / 2)
+          .attr("dy", "0.35em")
+          .merge(percentLabels)
+          .transition()
+          .duration(1000)
+          .attr("x", d => xScale(d.value) - 5)
+          .attr("y", d => yScale(d.key) + yScale.bandwidth() / 2)
+          .text(d => d.value.toFixed(2) + "%");
+
+        percentLabels.exit().remove();
+
+        // 更新类别名称标签
+        const categoryLabels = chart.selectAll(".category-label")
+          .data(aggregatedData, d => d.key);
+
+        categoryLabels.enter()
+          .append("text")
+          .attr("class", "category-label")
+          .attr("x", -10)
+          .attr("y", d => yScale(d.key) + yScale.bandwidth() / 2)
+          .attr("dy", "0.35em")
+          .merge(categoryLabels)
+          .transition()
+          .duration(1000)
+          .attr("x", -120)
+          .attr("y", d => yScale(d.key) + yScale.bandwidth() / 2)
+          .text(d => d.key.replace("_", " "));
+
+        categoryLabels.exit().remove();
+
+        // 更新进度条和序列号显示
+        const progress = ((seqIndex + 1) / data.length) * 100;
+        progressIndicator.style("width", progress + "%");
+        seqDisplay.text(`Seq: ${data[seqIndex].seq}`);
+      }
+
+      function play() {
+        isPlaying = true;
+        toggleImg.attr("src", "pause.png");
+        if (seqIndex >= data.length) seqIndex = 0; // 如果已播放完毕，重置为第一个序列
+        interval = setInterval(() => {
+          if (seqIndex >= data.length) {
+            clearInterval(interval);
+            isPlaying = false;
+            toggleImg.attr("src", "play.png");
+          } else {
+            update(seqIndex);
+            seqIndex++;
+          }
+        }, 1500);
+      }
+
+      function pause() {
+        isPlaying = false;
+        toggleImg.attr("src", "play.png");
+        clearInterval(interval);
+      }
+
+      toggleButton.on("click", () => {
+        if (isPlaying) {
+          pause();
+        } else {
+          play();
+        }
+      });
+
+      // 添加进度条的拖动功能
+      progressBar.on("click", function(event) {
+        const rect = progressBar.node().getBoundingClientRect();
+        const clickX = event.clientX - rect.left;
+        const newProgress = clickX / rect.width;
+        seqIndex = Math.floor(newProgress * data.length);
+        update(seqIndex);
+      });
+    });
+  </script>
+</body>
+</html>

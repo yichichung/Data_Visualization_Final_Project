@@ -1,0 +1,57 @@
+body {
+    font-family: "Comic Sans MS", sans-serif;
+    font-weight: bold;
+    height: auto; /* 允許高度根據內容增長 */
+    min-height: 100vh; /* 確保最小高度為視口高度 */
+    margin: 0;
+    background: linear-gradient(to top right, #E8F4FF, #F2E6E6);
+    background-size: cover; /* 覆蓋整個背景 */
+    background-repeat: no-repeat; /* 不重複背景 */
+    color: #30566E;
+}
+.bar-label {
+    font-size: 14px;
+    fill: white;
+    text-anchor: end;
+}
+.category-label {
+    font-size: 14px;
+    fill: black;
+    text-anchor: start;
+}
+#controls {
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 700px;
+}
+#progress-bar {
+    width: 500px;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+#progress {
+    width: 0%;
+    height: 100%;
+    background-color: steelblue;
+    transition: width 0.1s linear;
+}
+#seq-display {
+    font-size: 16px;
+}
+button {
+    padding: 0;
+    border: none;
+    background: white;
+    cursor: pointer;
+}
+img {
+    width: 40px;
+    height: 40px;
+}
