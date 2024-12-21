@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Appearance Description</title>
+    <link rel="stylesheet" href="ScatterMatrix.css">
+    <script src="https://unpkg.com/d3@4.13.0/build/d3.min.js"></script>
+    <style>
+      body, html {
+        height: 100%; 
+        margin: 0;
+        padding-bottom: 1000px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+      }
+
+      h1 {
+        font-family: Arial, sans-serif;
+        font-size: 2.5rem;
+        color: #333;
+        margin-top: 50px; /* 增加頂部的間距 */
+        margin-bottom: 5px; /* 減少與 h4 的間距 */
+      }  
+
+      h4 {
+        font-family: Arial, sans-serif;
+        font-size: 1.5rem;
+        color: #555;
+        margin-top: 0; /* 減少與 h1 的距離 */
+      }
+
+      #legend {
+        width: 600px;
+        height: 30px;
+        position: relative; /* Make positioning relative */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Student Appearance Description</h1>
+    <h4>Brushable Scatter Plot</h4>
+    
+    <script src="ScatterMatrix_index.js"></script>
+    <select id="groupSelector">
+        <option value="WorkingType">Working Type</option>
+        <option value="Male">Gender</option>
+        <option value="Class">Class Level</option>
+        <option value="Stat_expri">Statistics Learning</option> 
+      </select>
+    <div id="legend"></div>
+    <div id="brushable_scatterplot_matrix"></div>
+  </body>
+</html>
