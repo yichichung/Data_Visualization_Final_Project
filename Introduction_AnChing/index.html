@@ -115,6 +115,8 @@
     margin-bottom: 10px;
   }
 
+  
+
   .icon-card h2 {
     font-size: 1.2rem;
     margin: 10px 0;
@@ -124,6 +126,24 @@
     font-size: 0.9rem;
     color: #666;
   }  
+
+  #processing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -150px;
+    margin-bottom: 100px;
+  }
+
+  #processing-container img {
+    width: 1000px; /* Adjust the width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure responsiveness */
+    /* border: 1px solid #ccc; Optional: Add a border */
+    /* border-radius: 10px; /* Optional: Add rounded corners */
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); Optional: Add shadow */ 
+  }
+
   </style>
 </head>
 <body>
@@ -192,12 +212,17 @@
     </div>
   </div>
 
-  <h1>Data Collecting</h1>
+  <h1>Process of Analyzing Screen Usage Data</h1>
+  <hr style="border: 1px solid #ccc; width: 80%; margin: 20px auto;">
+  
   <div id="gif-container">
     <img src="ComputerBasedTest_GIF/Analysis+Sheet.gif" alt="GIF 1" class="gif">
     <img src="ComputerBasedTest_GIF/GAI.gif" alt="GIF 2" class="gif">
     <img src="ComputerBasedTest_GIF/Xlsx+Sheet.gif" alt="GIF 3" class="gif">
     <img src="ComputerBasedTest_GIF/Analysis+Sheet+GAI+Browser.gif" alt="GIF 4" class="gif">
+  </div>
+  <div id="processing-container">
+    <img src="Processing.png" alt="AI Robot Icon">
   </div>
 
   <script>
