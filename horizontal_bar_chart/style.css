@@ -1,14 +1,21 @@
 body {
-    font-family: "Comic Sans MS", sans-serif;
-    font-weight: bold;
+    font-family: "Ariel", sans-serif;
     height: auto; /* 允許高度根據內容增長 */
     min-height: 100vh; /* 確保最小高度為視口高度 */
     margin: 0;
-    background: linear-gradient(to top right, #E8F4FF, #F2E6E6);
     background-size: cover; /* 覆蓋整個背景 */
     background-repeat: no-repeat; /* 不重複背景 */
-    color: #30566E;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
 }
+.h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
 .bar-label {
     font-size: 14px;
     fill: white;
@@ -54,4 +61,7 @@ button {
 img {
     width: 40px;
     height: 40px;
+}
+svg {
+    border: 2px solid #788D85; /* 可選：方便看到邊界 */
 }
