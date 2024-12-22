@@ -1,13 +1,11 @@
 body {
-    font-family: "Comic Sans MS", sans-serif;
+    font-family: "Ariel", sans-serif;
     font-weight: bold;
     height: auto; /* 允許高度根據內容增長 */
     min-height: 100vh; /* 確保最小高度為視口高度 */
     margin: 0;
-    background: linear-gradient(to top right, #E8F4FF, #F2E6E6);
     background-size: cover; /* 覆蓋整個背景 */
     background-repeat: no-repeat; /* 不重複背景 */
-    color: #30566E;
 }
 
 .container {
