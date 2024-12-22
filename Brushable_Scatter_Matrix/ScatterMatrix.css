@@ -1,0 +1,70 @@
+svg {
+    font: 15px sans-serif;
+    padding: 10px;
+  }
+  
+  .axis,
+  .frame {
+    shape-rendering: crispEdges;
+  }
+  
+  .axis line {
+    stroke: #ddd;
+  }
+  
+  .axis path {
+    display: none;
+  }
+  
+  .cell text {
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  
+  .frame {
+    fill: none;
+    stroke: #aaa;
+  }
+  .tick text{
+    
+      fill: #635F5D;
+  }
+  circle {
+    fill-opacity: .7;
+  }
+  
+  circle.hidden {
+    fill: #ccc !important;
+  }
+  
+  .extent {
+    fill: #000;
+    fill-opacity: .125;
+    stroke: #fff;
+  }
+  
+  .histo {
+      fill: #bbbcbe;
+    stroke: white;
+  }
+  
+  .attr {
+      fill: #635F5D;
+  }
+
+  #brushable_scatterplot_matrix {
+    width: auto; /* The width will be dynamically set by the SVG */
+    height: auto; /* The height will be dynamically set by the SVG */
+  }
+
+  .axis path,
+.axis line {
+    stroke: grey;
+}
+
+.axis text {
+    fill: grey;
+}
+
+
+  

@@ -1,0 +1,67 @@
+body {
+    font-family: "Ariel", sans-serif;
+    height: auto; /* 允許高度根據內容增長 */
+    min-height: 100vh; /* 確保最小高度為視口高度 */
+    margin: 0;
+    background-size: cover; /* 覆蓋整個背景 */
+    background-repeat: no-repeat; /* 不重複背景 */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+.h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.bar-label {
+    font-size: 14px;
+    fill: white;
+    text-anchor: end;
+}
+.category-label {
+    font-size: 14px;
+    fill: black;
+    text-anchor: start;
+}
+#controls {
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 700px;
+}
+#progress-bar {
+    width: 500px;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+#progress {
+    width: 0%;
+    height: 100%;
+    background-color: steelblue;
+    transition: width 0.1s linear;
+}
+#seq-display {
+    font-size: 16px;
+}
+button {
+    padding: 0;
+    border: none;
+    background: white;
+    cursor: pointer;
+}
+img {
+    width: 40px;
+    height: 40px;
+}
+svg {
+    border: 2px solid #788D85; /* 可選：方便看到邊界 */
+}
