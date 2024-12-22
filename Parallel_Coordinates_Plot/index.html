@@ -9,8 +9,20 @@
       body {
         font-family: Arial, sans-serif;
       }
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
       #controls {
-        margin: 20px;
+        position: absolute;
+        top: 600px; /* Adjusted to position controls below the graph */
+        left: 60%;
+        transform: translateX(-50%); /* Center align the controls */
+        background: #fff;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
       }
       #legend {
         margin: 20px auto;
@@ -18,6 +30,8 @@
         display: flex;
         flex-wrap: wrap;
         font-size: 14px;
+        position: relative;
+        bottom: -30px;
       }
       .legend-item {
         margin-right: 15px;
@@ -37,23 +51,26 @@
     </style>
   </head>
   <body>
+    <h1>Parallel Coordinates</h1>
+
+    <svg id="parallel-coordinates" width="800" height="500"></svg>
+
     <div id="controls">
       <label for="attribute">Select Attribute:</label>
       <select id="attribute">
-        <option value="Male">Gender</option>
-        <option value="Stat_expri">Stat_expri</option>
-        <option value="Difficulty">Difficulty</option>
+        <option value="Class">Class</option>
+        <option value="Score_Group">Score_Group</option>
+        <option value="Interest_Group">Interest_Group</option>
+        <option value="Feedback_Group">Feedback_Group</option>
       </select>
       <button id="update">Update Visualization</button>
     </div>
 
     <div id="legend"></div>
 
-    <svg id="parallel-coordinates" width="800" height="500"></svg>
-
     <script>
       // Load data from CSV
-      d3.csv("data_modified.csv").then(function (data) {
+      d3.csv("Parallel_Coordinates_Plot_data.csv").then(function (data) {
         const margin = { top: 50, right: 50, bottom: 50, left: 50 };
         const width = 800 - margin.left - margin.right;
         const height = 500 - margin.top - margin.bottom;
@@ -65,7 +82,12 @@
           .append("g")
           .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-        const dimensions = ["stat_anxiety_Post", "stat_SelEffi_Post", "Score"];
+        const dimensions = [
+          "Search.GAI_R",
+          "Search.Browser_R",
+          "Work.Analysis_R",
+          "Work.Sheet_R",
+        ];
 
         // Ensure data consistency by converting strings to numbers and handling NaN values
         data.forEach((row) => {
@@ -94,8 +116,9 @@
         }
 
         function update(attribute) {
+          const customColors = ["#A7B2B7", "#C5CA8E", "#AC94A4"];
           const colorScale = d3
-            .scaleOrdinal(d3.schemeCategory10)
+            .scaleOrdinal(customColors)
             .domain(data.map((row) => row[attribute]));
 
           svg.selectAll(".path-group").remove();
@@ -115,7 +138,7 @@
 
           svg.selectAll(".axis").remove();
 
-          dimensions.forEach((d, i) => {
+          dimensions.forEach((d) => {
             svg
               .append("g")
               .attr("class", "axis")
@@ -139,17 +162,20 @@
             new Set(data.map((row) => row[attribute]))
           );
 
-          uniqueValues.forEach((value) => {
+          uniqueValues.forEach((value, index) => {
             const item = legend.append("div").attr("class", "legend-item");
             item
               .append("div")
               .attr("class", "legend-color")
-              .style("background-color", colorScale(value));
+              .style(
+                "background-color",
+                customColors[index % customColors.length]
+              );
             item.append("span").text(value);
           });
         }
 
-        update("Male"); // Initial render with Gender
+        update("Class"); // Initial render with Class
 
         d3.select("#update").on("click", function () {
           const selectedAttribute = d3.select("#attribute").property("value");
