@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacked Area Chart with Tooltip and Legend</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Stacked Area Graph of Proportion of Application Participant Used</h1>
+    <svg></svg>
+    <div class="tooltip"></div>
+    <script>
+        fetch('cumulative_percent.json')
+            .then(response => response.json())
+            .then(data => {
+                const formattedData = data.map(item => ({
+                    seq: item.seq,
+                    ...item
+                }));
+
+                const margin = { top: 20, right: 200, bottom: 30, left: 50 };
+                const width = 900 - margin.left - margin.right;
+                const height = 520 - margin.top - margin.bottom;
+
+                const keys = Object.keys(formattedData[0]).filter(key => key !== 'seq');
+
+                const stack = d3.stack().keys(keys);
+                const series = stack(formattedData);
+
+                const x = d3.scaleLinear()
+                    .domain(d3.extent(formattedData, d => d.seq))
+                    .range([0, width]);
+
+                const y = d3.scaleLinear()
+                    .domain([0, d3.max(series, s => d3.max(s, d => d[1]))])
+                    .range([height, 0]);
+
+                const color = {
+                    Work_Analysis: "#A6380F",
+                    Work_Mixed: "#A6857F",
+                    Work_Sheet: "#702A53",
+                    Search_Mixed: "#788D85",
+                    Search_GAI: "#192631",
+                    Search_Browser: "#5A5B39"
+                };
+
+                const svg = d3.select("svg")
+                    .attr("width", width + margin.left + margin.right)
+                    .attr("height", height + margin.top + margin.bottom)
+                    .append("g")
+                    .attr("transform", `translate(${margin.left},${margin.top})`);
+
+                const tooltip = d3.select(".tooltip");
+
+                svg.append("g")
+                    .attr("transform", `translate(0,${height})`)
+                    .call(d3.axisBottom(x).ticks(10));
+
+                svg.append("g")
+                    .call(d3.axisLeft(y));
+
+                const area = d3.area()
+                    .x(d => x(d.data.seq))
+                    .y0(d => y(d[0]))
+                    .y1(d => y(d[1]));
+
+                svg.selectAll(".area")
+                    .data(series)
+                    .enter()
+                    .append("path")
+                    .attr("class", "area")
+                    .attr("d", area)
+                    .style("fill", d => color[d.key])
+                    .on("mousemove", (event, d) => {
+                        const [xPos, yPos] = d3.pointer(event);
+                        const seqIndex = Math.round(x.invert(xPos));
+                        const seqData = formattedData.find(item => item.seq === seqIndex);
+
+                        tooltip.style("visibility", "visible")
+                            .style("left", `${event.pageX + 10}px`)
+                            .style("top", `${event.pageY + 10}px`)
+                            .html(`<strong>${d.key}</strong><br>Seq: ${seqIndex}<br>Value: ${seqData[d.key].toFixed(2)}%`);
+                    })
+                    .on("mouseout", () => {
+                        tooltip.style("visibility", "hidden");
+                    });
+
+                // Add Legend
+                const legend = svg.append("g")
+                    .attr("class", "legend")
+                    .attr("transform", `translate(${width + 20}, 20)`);
+
+                keys.forEach((key, index) => {
+                    const legendRow = legend.append("g")
+                        .attr("transform", `translate(0, ${index * 20})`);
+
+                    legendRow.append("rect")
+                        .attr("width", 15)
+                        .attr("height", 15)
+                        .attr("fill", color[key]);
+
+                    legendRow.append("text")
+                        .attr("x", 20)
+                        .attr("y", 12.5)
+                        .text(key)
+                        .attr("text-anchor", "start")
+                        .attr("alignment-baseline", "middle");
+                });
+            })
+            .catch(error => console.error('Error loading JSON:', error));
+    </script>
+</body>
+</html>

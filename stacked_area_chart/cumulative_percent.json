@@ -1,0 +1,902 @@
+[
+    {
+        "seq": 1,
+        "Work_Analysis": 8.426966292134832,
+        "Work_Mixed": 39.8876404494382,
+        "Work_Sheet": 2.247191011235955,
+        "Search_Mixed": 32.02247191011236,
+        "Search_GAI": 6.741573033707865,
+        "Search_Browser": 10.674157303370785
+    },
+    {
+        "seq": 2,
+        "Work_Analysis": 8.98876404494382,
+        "Work_Mixed": 38.20224719101123,
+        "Work_Sheet": 3.3707865168539324,
+        "Search_Mixed": 28.932584269662918,
+        "Search_GAI": 9.269662921348315,
+        "Search_Browser": 11.235955056179774
+    },
+    {
+        "seq": 3,
+        "Work_Analysis": 13.670411985018728,
+        "Work_Mixed": 28.08988764044944,
+        "Work_Sheet": 8.801498127340825,
+        "Search_Mixed": 19.662921348314608,
+        "Search_GAI": 13.108614232209737,
+        "Search_Browser": 16.666666666666664
+    },
+    {
+        "seq": 4,
+        "Work_Analysis": 15.730337078651685,
+        "Work_Mixed": 22.752808988764045,
+        "Work_Sheet": 12.07865168539326,
+        "Search_Mixed": 15.44943820224719,
+        "Search_GAI": 13.764044943820226,
+        "Search_Browser": 20.224719101123593
+    },
+    {
+        "seq": 5,
+        "Work_Analysis": 17.640449438202246,
+        "Work_Mixed": 19.775280898876403,
+        "Work_Sheet": 13.146067415730336,
+        "Search_Mixed": 12.808988764044942,
+        "Search_GAI": 14.719101123595504,
+        "Search_Browser": 21.910112359550563
+    },
+    {
+        "seq": 6,
+        "Work_Analysis": 18.726591760299627,
+        "Work_Mixed": 17.60299625468165,
+        "Work_Sheet": 14.232209737827715,
+        "Search_Mixed": 11.610486891385769,
+        "Search_GAI": 15.636704119850187,
+        "Search_Browser": 22.191011235955056
+    },
+    {
+        "seq": 7,
+        "Work_Analysis": 19.181380417335472,
+        "Work_Mixed": 16.292134831460675,
+        "Work_Sheet": 15.08828250401284,
+        "Search_Mixed": 10.754414125200643,
+        "Search_GAI": 16.853932584269664,
+        "Search_Browser": 21.829855537720707
+    },
+    {
+        "seq": 8,
+        "Work_Analysis": 20.014044943820224,
+        "Work_Mixed": 15.168539325842698,
+        "Work_Sheet": 15.379213483146067,
+        "Search_Mixed": 10.182584269662922,
+        "Search_GAI": 17.97752808988764,
+        "Search_Browser": 21.27808988764045
+    },
+    {
+        "seq": 9,
+        "Work_Analysis": 20.09987515605493,
+        "Work_Mixed": 14.794007490636703,
+        "Work_Sheet": 15.667915106117352,
+        "Search_Mixed": 9.737827715355806,
+        "Search_GAI": 18.476903870162296,
+        "Search_Browser": 21.22347066167291
+    },
+    {
+        "seq": 10,
+        "Work_Analysis": 20.0561797752809,
+        "Work_Mixed": 13.93258426966292,
+        "Work_Sheet": 16.573033707865168,
+        "Search_Mixed": 9.325842696629213,
+        "Search_GAI": 19.101123595505616,
+        "Search_Browser": 21.01123595505618
+    },
+    {
+        "seq": 11,
+        "Work_Analysis": 19.96935648621042,
+        "Work_Mixed": 13.789581205311544,
+        "Work_Sheet": 16.802860061287028,
+        "Search_Mixed": 8.580183861082737,
+        "Search_GAI": 19.458631256384066,
+        "Search_Browser": 21.39938712972421
+    },
+    {
+        "seq": 12,
+        "Work_Analysis": 20.131086142322097,
+        "Work_Mixed": 13.249063670411983,
+        "Work_Sheet": 17.181647940074907,
+        "Search_Mixed": 8.146067415730338,
+        "Search_GAI": 19.89700374531835,
+        "Search_Browser": 21.39513108614232
+    },
+    {
+        "seq": 13,
+        "Work_Analysis": 20.181503889369058,
+        "Work_Mixed": 13.180639585133965,
+        "Work_Sheet": 17.199654278305964,
+        "Search_Mixed": 7.821953327571306,
+        "Search_GAI": 20.397579948141743,
+        "Search_Browser": 21.21866897147796
+    },
+    {
+        "seq": 14,
+        "Work_Analysis": 20.545746388443018,
+        "Work_Mixed": 12.881219903691814,
+        "Work_Sheet": 17.134831460674157,
+        "Search_Mixed": 7.504012841091493,
+        "Search_GAI": 20.987158908507222,
+        "Search_Browser": 20.947030497592294
+    },
+    {
+        "seq": 15,
+        "Work_Analysis": 20.786516853932586,
+        "Work_Mixed": 12.846441947565543,
+        "Work_Sheet": 16.928838951310862,
+        "Search_Mixed": 7.2659176029962556,
+        "Search_GAI": 21.61048689138577,
+        "Search_Browser": 20.56179775280899
+    },
+    {
+        "seq": 16,
+        "Work_Analysis": 21.06741573033708,
+        "Work_Mixed": 12.956460674157302,
+        "Work_Sheet": 16.537921348314608,
+        "Search_Mixed": 7.127808988764045,
+        "Search_GAI": 22.05056179775281,
+        "Search_Browser": 20.259831460674157
+    },
+    {
+        "seq": 17,
+        "Work_Analysis": 21.34831460674157,
+        "Work_Mixed": 12.921348314606742,
+        "Work_Sheet": 16.292134831460675,
+        "Search_Mixed": 6.873760740251157,
+        "Search_GAI": 22.67019167217449,
+        "Search_Browser": 19.89424983476537
+    },
+    {
+        "seq": 18,
+        "Work_Analysis": 21.754057428214733,
+        "Work_Mixed": 12.921348314606742,
+        "Work_Sheet": 15.886392009987516,
+        "Search_Mixed": 6.585518102372035,
+        "Search_GAI": 23.314606741573034,
+        "Search_Browser": 19.538077403245943
+    },
+    {
+        "seq": 19,
+        "Work_Analysis": 22.146658781785924,
+        "Work_Mixed": 12.891780011827322,
+        "Work_Sheet": 15.523358959195743,
+        "Search_Mixed": 6.386753400354819,
+        "Search_GAI": 23.92075694855115,
+        "Search_Browser": 19.130691898285036
+    },
+    {
+        "seq": 20,
+        "Work_Analysis": 22.4438202247191,
+        "Work_Mixed": 12.893258426966291,
+        "Work_Sheet": 15.224719101123597,
+        "Search_Mixed": 6.320224719101124,
+        "Search_GAI": 24.213483146067418,
+        "Search_Browser": 18.90449438202247
+    },
+    {
+        "seq": 21,
+        "Work_Analysis": 22.819689673622257,
+        "Work_Mixed": 12.76083467094703,
+        "Work_Sheet": 14.981273408239701,
+        "Search_Mixed": 6.206527554842162,
+        "Search_GAI": 24.505082932049223,
+        "Search_Browser": 18.726591760299627
+    },
+    {
+        "seq": 22,
+        "Work_Analysis": 23.084780388151174,
+        "Work_Mixed": 12.58937691521961,
+        "Work_Sheet": 14.887640449438203,
+        "Search_Mixed": 6.103166496424923,
+        "Search_GAI": 24.66802860061287,
+        "Search_Browser": 18.667007150153218
+    },
+    {
+        "seq": 23,
+        "Work_Analysis": 23.25354176844162,
+        "Work_Mixed": 12.628236443575966,
+        "Work_Sheet": 14.680019540791402,
+        "Search_Mixed": 6.033219345383488,
+        "Search_GAI": 24.74352711284807,
+        "Search_Browser": 18.66145578895945
+    },
+    {
+        "seq": 24,
+        "Work_Analysis": 23.45505617977528,
+        "Work_Mixed": 12.523408239700373,
+        "Work_Sheet": 14.583333333333334,
+        "Search_Mixed": 5.8988764044943816,
+        "Search_GAI": 24.929775280898877,
+        "Search_Browser": 18.609550561797754
+    },
+    {
+        "seq": 25,
+        "Work_Analysis": 23.70786516853933,
+        "Work_Mixed": 12.337078651685394,
+        "Work_Sheet": 14.51685393258427,
+        "Search_Mixed": 5.842696629213483,
+        "Search_GAI": 24.9438202247191,
+        "Search_Browser": 18.651685393258425
+    },
+    {
+        "seq": 26,
+        "Work_Analysis": 23.833189282627483,
+        "Work_Mixed": 12.337942955920484,
+        "Work_Sheet": 14.39066551426102,
+        "Search_Mixed": 5.769230769230769,
+        "Search_GAI": 25.04321521175454,
+        "Search_Browser": 18.625756266205702
+    },
+    {
+        "seq": 27,
+        "Work_Analysis": 24.05326674989596,
+        "Work_Mixed": 12.172284644194757,
+        "Work_Sheet": 14.336246358718268,
+        "Search_Mixed": 5.722014148980441,
+        "Search_GAI": 25.15605493133583,
+        "Search_Browser": 18.56013316687474
+    },
+    {
+        "seq": 28,
+        "Work_Analysis": 24.2776886035313,
+        "Work_Mixed": 11.958266452648475,
+        "Work_Sheet": 14.325842696629213,
+        "Search_Mixed": 5.718298555377207,
+        "Search_GAI": 25.20064205457464,
+        "Search_Browser": 18.519261637239165
+    },
+    {
+        "seq": 29,
+        "Work_Analysis": 24.331654397520342,
+        "Work_Mixed": 11.933359163115071,
+        "Work_Sheet": 14.296784192173575,
+        "Search_Mixed": 5.6954668733049205,
+        "Search_GAI": 25.300271212708253,
+        "Search_Browser": 18.44246416117784
+    },
+    {
+        "seq": 30,
+        "Work_Analysis": 24.531835205992508,
+        "Work_Mixed": 11.872659176029963,
+        "Work_Sheet": 14.157303370786517,
+        "Search_Mixed": 5.599250936329589,
+        "Search_GAI": 25.56179775280899,
+        "Search_Browser": 18.277153558052433
+    },
+    {
+        "seq": 31,
+        "Work_Analysis": 24.682856107285247,
+        "Work_Mixed": 11.815875317143892,
+        "Work_Sheet": 14.063066328379847,
+        "Search_Mixed": 5.58173251177963,
+        "Search_GAI": 25.679594055817322,
+        "Search_Browser": 18.17687567959406
+    },
+    {
+        "seq": 32,
+        "Work_Analysis": 24.859550561797754,
+        "Work_Mixed": 11.797752808988763,
+        "Work_Sheet": 13.904494382022472,
+        "Search_Mixed": 5.565308988764045,
+        "Search_GAI": 25.79002808988764,
+        "Search_Browser": 18.082865168539325
+    },
+    {
+        "seq": 33,
+        "Work_Analysis": 24.974463738508682,
+        "Work_Mixed": 11.814776983316309,
+        "Work_Sheet": 13.772557030983998,
+        "Search_Mixed": 5.532856656452162,
+        "Search_GAI": 25.910793326523663,
+        "Search_Browser": 17.994552264215187
+    },
+    {
+        "seq": 34,
+        "Work_Analysis": 25.13218770654329,
+        "Work_Mixed": 11.74818241903503,
+        "Work_Sheet": 13.681427627230667,
+        "Search_Mixed": 5.502313284864507,
+        "Search_GAI": 25.974884335756776,
+        "Search_Browser": 17.96100462656973
+    },
+    {
+        "seq": 35,
+        "Work_Analysis": 25.31300160513644,
+        "Work_Mixed": 11.637239165329053,
+        "Work_Sheet": 13.611556982343497,
+        "Search_Mixed": 5.569823434991974,
+        "Search_GAI": 26.051364365971107,
+        "Search_Browser": 17.81701444622793
+    },
+    {
+        "seq": 36,
+        "Work_Analysis": 25.468164794007492,
+        "Work_Mixed": 11.548064918851436,
+        "Work_Sheet": 13.545568039950062,
+        "Search_Mixed": 5.539950062421973,
+        "Search_GAI": 26.12359550561798,
+        "Search_Browser": 17.77465667915106
+    },
+    {
+        "seq": 37,
+        "Work_Analysis": 25.56938961433343,
+        "Work_Mixed": 11.539629517157607,
+        "Work_Sheet": 13.452778621317949,
+        "Search_Mixed": 5.45095657455208,
+        "Search_GAI": 26.222289705435774,
+        "Search_Browser": 17.764955967203157
+    },
+    {
+        "seq": 38,
+        "Work_Analysis": 25.635718509757538,
+        "Work_Mixed": 11.59077468953282,
+        "Work_Sheet": 13.335304553518629,
+        "Search_Mixed": 5.425783560023654,
+        "Search_GAI": 26.3010053222945,
+        "Search_Browser": 17.711413364872854
+    },
+    {
+        "seq": 39,
+        "Work_Analysis": 25.785076346874096,
+        "Work_Mixed": 11.538461538461538,
+        "Work_Sheet": 13.238259867473351,
+        "Search_Mixed": 5.416306539902045,
+        "Search_GAI": 26.289253817343706,
+        "Search_Browser": 17.73264188994526
+    },
+    {
+        "seq": 40,
+        "Work_Analysis": 25.828651685393254,
+        "Work_Mixed": 11.54494382022472,
+        "Work_Sheet": 13.188202247191011,
+        "Search_Mixed": 5.365168539325843,
+        "Search_GAI": 26.320224719101127,
+        "Search_Browser": 17.752808988764045
+    },
+    {
+        "seq": 41,
+        "Work_Analysis": 25.828994244998633,
+        "Work_Mixed": 11.564812277336255,
+        "Work_Sheet": 13.167991230474103,
+        "Search_Mixed": 5.357632228007674,
+        "Search_GAI": 26.294875308303645,
+        "Search_Browser": 17.785694710879692
+    },
+    {
+        "seq": 42,
+        "Work_Analysis": 25.88282504012841,
+        "Work_Mixed": 11.570358480470839,
+        "Work_Sheet": 13.108614232209737,
+        "Search_Mixed": 5.310326377742109,
+        "Search_GAI": 26.37774210807919,
+        "Search_Browser": 17.750133761369717
+    },
+    {
+        "seq": 43,
+        "Work_Analysis": 26.01254246145806,
+        "Work_Mixed": 11.549516592631303,
+        "Work_Sheet": 12.999738698719623,
+        "Search_Mixed": 5.304415991638359,
+        "Search_GAI": 26.430624510060095,
+        "Search_Browser": 17.70316174549255
+    },
+    {
+        "seq": 44,
+        "Work_Analysis": 26.085291113380997,
+        "Work_Mixed": 11.529622063329928,
+        "Work_Sheet": 12.946884576098059,
+        "Search_Mixed": 5.273237997957099,
+        "Search_GAI": 26.54494382022472,
+        "Search_Browser": 17.62002042900919
+    },
+    {
+        "seq": 45,
+        "Work_Analysis": 25.99250936329588,
+        "Work_Mixed": 11.585518102372035,
+        "Work_Sheet": 12.983770287141075,
+        "Search_Mixed": 5.29338327091136,
+        "Search_GAI": 26.591760299625467,
+        "Search_Browser": 17.55305867665418
+    },
+    {
+        "seq": 46,
+        "Work_Analysis": 26.02589154860772,
+        "Work_Mixed": 11.553492916463117,
+        "Work_Sheet": 12.982413287738154,
+        "Search_Mixed": 5.276013678553982,
+        "Search_GAI": 26.64875427454812,
+        "Search_Browser": 17.51343429408891
+    },
+    {
+        "seq": 47,
+        "Work_Analysis": 26.17738465216352,
+        "Work_Mixed": 11.486971073392303,
+        "Work_Sheet": 12.897442027253167,
+        "Search_Mixed": 5.2115706430791295,
+        "Search_GAI": 26.739182404972507,
+        "Search_Browser": 17.487449199139373
+    },
+    {
+        "seq": 48,
+        "Work_Analysis": 26.287453183520597,
+        "Work_Mixed": 11.423220973782772,
+        "Work_Sheet": 12.851123595505618,
+        "Search_Mixed": 5.149812734082397,
+        "Search_GAI": 26.825842696629216,
+        "Search_Browser": 17.462546816479403
+    },
+    {
+        "seq": 49,
+        "Work_Analysis": 26.347168080715434,
+        "Work_Mixed": 11.373538179316672,
+        "Work_Sheet": 12.841091492776885,
+        "Search_Mixed": 5.090575556065122,
+        "Search_GAI": 26.863104792478786,
+        "Search_Browser": 17.4845218986471
+    },
+    {
+        "seq": 50,
+        "Work_Analysis": 26.382022471910112,
+        "Work_Mixed": 11.370786516853933,
+        "Work_Sheet": 12.808988764044942,
+        "Search_Mixed": 5.033707865168539,
+        "Search_GAI": 26.786516853932586,
+        "Search_Browser": 17.617977528089888
+    },
+    {
+        "seq": 51,
+        "Work_Analysis": 26.393478739810533,
+        "Work_Mixed": 11.423220973782772,
+        "Work_Sheet": 12.745098039215685,
+        "Search_Mixed": 4.9900859220092535,
+        "Search_GAI": 26.80105750165235,
+        "Search_Browser": 17.647058823529413
+    },
+    {
+        "seq": 52,
+        "Work_Analysis": 26.490924805531545,
+        "Work_Mixed": 11.376404494382022,
+        "Work_Sheet": 12.69446845289542,
+        "Search_Mixed": 4.904926534140017,
+        "Search_GAI": 26.825842696629216,
+        "Search_Browser": 17.70743301642178
+    },
+    {
+        "seq": 53,
+        "Work_Analysis": 26.521093915624338,
+        "Work_Mixed": 11.405554377782488,
+        "Work_Sheet": 12.635149459402161,
+        "Search_Mixed": 4.886580453678185,
+        "Search_GAI": 26.881492474030104,
+        "Search_Browser": 17.670129319482722
+    },
+    {
+        "seq": 54,
+        "Work_Analysis": 26.550145651269247,
+        "Work_Mixed": 11.412817311693717,
+        "Work_Sheet": 12.598834789846025,
+        "Search_Mixed": 4.868913857677903,
+        "Search_GAI": 27.00790678318768,
+        "Search_Browser": 17.561381606325426
+    },
+    {
+        "seq": 55,
+        "Work_Analysis": 26.58835546475996,
+        "Work_Mixed": 11.399387129724209,
+        "Work_Sheet": 12.574055158324821,
+        "Search_Mixed": 4.831460674157303,
+        "Search_GAI": 27.058222676200206,
+        "Search_Browser": 17.548518896833503
+    },
+    {
+        "seq": 56,
+        "Work_Analysis": 26.635232744783305,
+        "Work_Mixed": 11.36637239165329,
+        "Work_Sheet": 12.560192616372392,
+        "Search_Mixed": 4.845505617977528,
+        "Search_GAI": 27.136837881219904,
+        "Search_Browser": 17.45585874799358
+    },
+    {
+        "seq": 57,
+        "Work_Analysis": 26.719889611669622,
+        "Work_Mixed": 11.344372166370983,
+        "Work_Sheet": 12.49753597476838,
+        "Search_Mixed": 4.859057756751429,
+        "Search_GAI": 27.212694657993296,
+        "Search_Browser": 17.366449832446285
+    },
+    {
+        "seq": 58,
+        "Work_Analysis": 26.73382409918636,
+        "Work_Mixed": 11.342502905850447,
+        "Work_Sheet": 12.485470747772181,
+        "Search_Mixed": 4.804339403332042,
+        "Search_GAI": 27.256877179387835,
+        "Search_Browser": 17.376985664471135
+    },
+    {
+        "seq": 59,
+        "Work_Analysis": 26.775852218625023,
+        "Work_Mixed": 11.340697010093317,
+        "Work_Sheet": 12.44524852409065,
+        "Search_Mixed": 4.827651875833175,
+        "Search_GAI": 27.29956198819273,
+        "Search_Browser": 17.31098838316511
+    },
+    {
+        "seq": 60,
+        "Work_Analysis": 26.835205992509366,
+        "Work_Mixed": 11.329588014981272,
+        "Work_Sheet": 12.397003745318353,
+        "Search_Mixed": 4.765917602996255,
+        "Search_GAI": 27.340823970037455,
+        "Search_Browser": 17.331460674157302
+    },
+    {
+        "seq": 61,
+        "Work_Analysis": 26.874194142567692,
+        "Work_Mixed": 11.328053048443545,
+        "Work_Sheet": 12.359550561797752,
+        "Search_Mixed": 4.761466200036839,
+        "Search_GAI": 27.362313501565666,
+        "Search_Browser": 17.314422545588506
+    },
+    {
+        "seq": 62,
+        "Work_Analysis": 26.930047118521205,
+        "Work_Mixed": 11.29032258064516,
+        "Work_Sheet": 12.341428053642623,
+        "Search_Mixed": 4.748097136643711,
+        "Search_GAI": 27.374048568321857,
+        "Search_Browser": 17.316056542225443
+    },
+    {
+        "seq": 63,
+        "Work_Analysis": 26.930622436240416,
+        "Work_Mixed": 11.316211878009632,
+        "Work_Sheet": 12.314963438558944,
+        "Search_Mixed": 4.717317638665953,
+        "Search_GAI": 27.429998216515074,
+        "Search_Browser": 17.290886392009988
+    },
+    {
+        "seq": 64,
+        "Work_Analysis": 26.93995786516854,
+        "Work_Mixed": 11.34129213483146,
+        "Work_Sheet": 12.280547752808989,
+        "Search_Mixed": 4.696278089887641,
+        "Search_GAI": 27.484199438202246,
+        "Search_Browser": 17.257724719101123
+    },
+    {
+        "seq": 65,
+        "Work_Analysis": 26.888504753673292,
+        "Work_Mixed": 11.382886776145202,
+        "Work_Sheet": 12.290406222990493,
+        "Search_Mixed": 4.710458081244598,
+        "Search_GAI": 27.53673292999136,
+        "Search_Browser": 17.191011235955056
+    },
+    {
+        "seq": 66,
+        "Work_Analysis": 26.872659176029963,
+        "Work_Mixed": 11.423220973782772,
+        "Work_Sheet": 12.265917602996254,
+        "Search_Mixed": 4.715696288729997,
+        "Search_GAI": 27.579162410623088,
+        "Search_Browser": 17.14334354783793
+    },
+    {
+        "seq": 67,
+        "Work_Analysis": 26.840516518530944,
+        "Work_Mixed": 11.46235116552071,
+        "Work_Sheet": 12.258930068757337,
+        "Search_Mixed": 4.712393090726144,
+        "Search_GAI": 27.595170216334058,
+        "Search_Browser": 17.130638940130808
+    },
+    {
+        "seq": 68,
+        "Work_Analysis": 26.883674818241904,
+        "Work_Mixed": 11.442498347653668,
+        "Work_Sheet": 12.235624586913417,
+        "Search_Mixed": 4.676140118968935,
+        "Search_GAI": 27.643754130865826,
+        "Search_Browser": 17.118307997356247
+    },
+    {
+        "seq": 69,
+        "Work_Analysis": 26.819736199316075,
+        "Work_Mixed": 11.488356945122945,
+        "Work_Sheet": 12.253704608369972,
+        "Search_Mixed": 4.632795961569777,
+        "Search_GAI": 27.73163979807849,
+        "Search_Browser": 17.073766487542745
+    },
+    {
+        "seq": 70,
+        "Work_Analysis": 26.757624398073837,
+        "Work_Mixed": 11.5008025682183,
+        "Work_Sheet": 12.303370786516854,
+        "Search_Mixed": 4.622792937399679,
+        "Search_GAI": 27.825040128410915,
+        "Search_Browser": 16.99036918138042
+    },
+    {
+        "seq": 71,
+        "Work_Analysis": 26.752650735875932,
+        "Work_Mixed": 11.52081025478715,
+        "Work_Sheet": 12.288336762145908,
+        "Search_Mixed": 4.636809621775598,
+        "Search_GAI": 27.876246241493906,
+        "Search_Browser": 16.925146383921508
+    },
+    {
+        "seq": 72,
+        "Work_Analysis": 26.740012484394505,
+        "Work_Mixed": 11.532459425717853,
+        "Work_Sheet": 12.289325842696629,
+        "Search_Mixed": 4.619225967540574,
+        "Search_GAI": 27.965043695380775,
+        "Search_Browser": 16.853932584269664
+    },
+    {
+        "seq": 73,
+        "Work_Analysis": 26.72002462675081,
+        "Work_Mixed": 11.559181160535632,
+        "Work_Sheet": 12.282591965522549,
+        "Search_Mixed": 4.609819916884716,
+        "Search_GAI": 28.043712482684313,
+        "Search_Browser": 16.78466984762198
+    },
+    {
+        "seq": 74,
+        "Work_Analysis": 26.692985119951413,
+        "Work_Mixed": 11.592772547828728,
+        "Work_Sheet": 12.276040085028848,
+        "Search_Mixed": 4.58548436076526,
+        "Search_GAI": 28.08988764044944,
+        "Search_Browser": 16.76283024597631
+    },
+    {
+        "seq": 75,
+        "Work_Analysis": 26.681647940074903,
+        "Work_Mixed": 11.573033707865168,
+        "Work_Sheet": 12.307116104868914,
+        "Search_Mixed": 4.569288389513108,
+        "Search_GAI": 28.1123595505618,
+        "Search_Browser": 16.756554307116104
+    },
+    {
+        "seq": 76,
+        "Work_Analysis": 26.626256652868125,
+        "Work_Mixed": 11.642519219396807,
+        "Work_Sheet": 12.293021880544057,
+        "Search_Mixed": 4.553518628030751,
+        "Search_GAI": 28.15641632170313,
+        "Search_Browser": 16.728267297457126
+    },
+    {
+        "seq": 77,
+        "Work_Analysis": 26.630672698088432,
+        "Work_Mixed": 11.65912738946447,
+        "Work_Sheet": 12.271997665256091,
+        "Search_Mixed": 4.567342769589961,
+        "Search_GAI": 28.20662483583832,
+        "Search_Browser": 16.664234641762732
+    },
+    {
+        "seq": 78,
+        "Work_Analysis": 26.649380581964856,
+        "Work_Mixed": 11.632094497263036,
+        "Work_Sheet": 12.2803226735811,
+        "Search_Mixed": 4.559204840103717,
+        "Search_GAI": 28.241140881590322,
+        "Search_Browser": 16.637856525496975
+    },
+    {
+        "seq": 79,
+        "Work_Analysis": 26.610723936851088,
+        "Work_Mixed": 11.683970985635044,
+        "Work_Sheet": 12.267102830322855,
+        "Search_Mixed": 4.565495662067985,
+        "Search_GAI": 28.246337647560804,
+        "Search_Browser": 16.626368937562226
+    },
+    {
+        "seq": 80,
+        "Work_Analysis": 26.601123595505616,
+        "Work_Mixed": 11.664325842696629,
+        "Work_Sheet": 12.296348314606742,
+        "Search_Mixed": 4.529494382022472,
+        "Search_GAI": 28.279494382022474,
+        "Search_Browser": 16.629213483146067
+    },
+    {
+        "seq": 81,
+        "Work_Analysis": 26.612567623803578,
+        "Work_Mixed": 11.638229990289915,
+        "Work_Sheet": 12.311000138715494,
+        "Search_Mixed": 4.501317797197947,
+        "Search_GAI": 28.32570398113469,
+        "Search_Browser": 16.61118046885837
+    },
+    {
+        "seq": 82,
+        "Work_Analysis": 26.562071800493285,
+        "Work_Mixed": 11.674431351055084,
+        "Work_Sheet": 12.32529460126062,
+        "Search_Mixed": 4.47382844614963,
+        "Search_GAI": 28.35023294053165,
+        "Search_Browser": 16.61414086050973
+    },
+    {
+        "seq": 83,
+        "Work_Analysis": 26.492486801137133,
+        "Work_Mixed": 11.743603627995126,
+        "Work_Sheet": 12.32570732367673,
+        "Search_Mixed": 4.467307431975091,
+        "Search_GAI": 28.353864897793418,
+        "Search_Browser": 16.6170299174225
+    },
+    {
+        "seq": 84,
+        "Work_Analysis": 26.45131086142322,
+        "Work_Mixed": 11.744248261102195,
+        "Work_Sheet": 12.366238630283574,
+        "Search_Mixed": 4.454253611556982,
+        "Search_GAI": 28.390850722311395,
+        "Search_Browser": 16.593097913322634
+    },
+    {
+        "seq": 85,
+        "Work_Analysis": 26.391275611368144,
+        "Work_Mixed": 11.797752808988763,
+        "Work_Sheet": 12.372769332452082,
+        "Search_Mixed": 4.454725710508923,
+        "Search_GAI": 28.433575677462,
+        "Search_Browser": 16.54990085922009
+    },
+    {
+        "seq": 86,
+        "Work_Analysis": 26.37836425398484,
+        "Work_Mixed": 11.78468774496995,
+        "Work_Sheet": 12.398745753854195,
+        "Search_Mixed": 4.429056702377842,
+        "Search_GAI": 28.468774496995035,
+        "Search_Browser": 16.540371047818134
+    },
+    {
+        "seq": 87,
+        "Work_Analysis": 26.32054759137285,
+        "Work_Mixed": 11.80421025442335,
+        "Work_Sheet": 12.437039907012785,
+        "Search_Mixed": 4.4039777863877045,
+        "Search_GAI": 28.541908820870464,
+        "Search_Browser": 16.49231563993284
+    },
+    {
+        "seq": 88,
+        "Work_Analysis": 26.244892747701737,
+        "Work_Mixed": 11.861593462717059,
+        "Work_Sheet": 12.455311542390195,
+        "Search_Mixed": 4.38585291113381,
+        "Search_GAI": 28.60699693564862,
+        "Search_Browser": 16.44535240040858
+    },
+    {
+        "seq": 89,
+        "Work_Analysis": 26.164625678575938,
+        "Work_Mixed": 11.892437823507134,
+        "Work_Sheet": 12.50473425072592,
+        "Search_Mixed": 4.368135336447418,
+        "Search_GAI": 28.664310061860874,
+        "Search_Browser": 16.405756848882717
+    },
+    {
+        "seq": 90,
+        "Work_Analysis": 26.02996254681648,
+        "Work_Mixed": 11.972534332084894,
+        "Work_Sheet": 12.559300873907617,
+        "Search_Mixed": 4.344569288389513,
+        "Search_GAI": 28.732833957553062,
+        "Search_Browser": 16.360799001248438
+    },
+    {
+        "seq": 91,
+        "Work_Analysis": 25.93530065440178,
+        "Work_Mixed": 11.970613656006915,
+        "Work_Sheet": 12.655883442400295,
+        "Search_Mixed": 4.31534757377454,
+        "Search_GAI": 28.81219903691814,
+        "Search_Browser": 16.310655636498332
+    },
+    {
+        "seq": 92,
+        "Work_Analysis": 25.848803126526626,
+        "Work_Mixed": 11.980947728383,
+        "Work_Sheet": 12.732046897899366,
+        "Search_Mixed": 4.298974108451392,
+        "Search_GAI": 28.859306301905228,
+        "Search_Browser": 16.27992183683439
+    },
+    {
+        "seq": 93,
+        "Work_Analysis": 25.74604325238613,
+        "Work_Mixed": 12.021263742902018,
+        "Work_Sheet": 12.79449075752084,
+        "Search_Mixed": 4.2889935967137855,
+        "Search_GAI": 28.91748217953365,
+        "Search_Browser": 16.231726470943578
+    },
+    {
+        "seq": 94,
+        "Work_Analysis": 25.67535261773847,
+        "Work_Mixed": 12.054745398039685,
+        "Work_Sheet": 12.831699737030839,
+        "Search_Mixed": 4.249342577097777,
+        "Search_GAI": 28.986373416208462,
+        "Search_Browser": 16.20248625388477
+    },
+    {
+        "seq": 95,
+        "Work_Analysis": 25.558840922531047,
+        "Work_Mixed": 12.099349497338853,
+        "Work_Sheet": 12.90360733293909,
+        "Search_Mixed": 4.228267297457125,
+        "Search_GAI": 29.036073329390895,
+        "Search_Browser": 16.17386162034299
+    },
+    {
+        "seq": 96,
+        "Work_Analysis": 25.485720973782772,
+        "Work_Mixed": 12.084503745318353,
+        "Work_Sheet": 12.991573033707866,
+        "Search_Mixed": 4.207631086142323,
+        "Search_GAI": 29.078885767790265,
+        "Search_Browser": 16.15168539325843
+    },
+    {
+        "seq": 97,
+        "Work_Analysis": 25.379358276381325,
+        "Work_Mixed": 12.104714467740067,
+        "Work_Sheet": 13.077725008687594,
+        "Search_Mixed": 4.2163790107726165,
+        "Search_GAI": 29.115023746090586,
+        "Search_Browser": 16.106799490327813
+    },
+    {
+        "seq": 98,
+        "Work_Analysis": 25.275166246273788,
+        "Work_Mixed": 12.107314836046779,
+        "Work_Sheet": 13.17931667048842,
+        "Search_Mixed": 4.207750515936712,
+        "Search_GAI": 29.138958954368267,
+        "Search_Browser": 16.091492776886035
+    },
+    {
+        "seq": 99,
+        "Work_Analysis": 25.195778004766765,
+        "Work_Mixed": 12.138236295539667,
+        "Work_Sheet": 13.227783452502553,
+        "Search_Mixed": 4.170922710248552,
+        "Search_GAI": 29.082964476222905,
+        "Search_Browser": 16.184315060719555
+    },
+    {
+        "seq": 100,
+        "Work_Analysis": 25.14606741573034,
+        "Work_Mixed": 12.140449438202246,
+        "Work_Sheet": 13.275280898876405,
+        "Search_Mixed": 4.146067415730337,
+        "Search_GAI": 28.898876404494384,
+        "Search_Browser": 16.39325842696629
+    }
+]
