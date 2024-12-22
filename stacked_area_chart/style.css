@@ -1,11 +1,14 @@
 body {
     font-family: "Ariel", sans-serif;
-    font-weight: bold;
     height: auto; /* 允許高度根據內容增長 */
     min-height: 100vh; /* 確保最小高度為視口高度 */
     margin: 0;
     background-size: cover; /* 覆蓋整個背景 */
     background-repeat: no-repeat; /* 不重複背景 */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
 }
 
 .container {
