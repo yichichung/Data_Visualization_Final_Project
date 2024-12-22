@@ -37,9 +37,14 @@
                     .domain([0, d3.max(series, s => d3.max(s, d => d[1]))])
                     .range([height, 0]);
 
-                const color = d3.scaleOrdinal()
-                    .domain(keys)
-                    .range(d3.schemeCategory10);
+                const color = {
+                    Work_Analysis: "#A6380F",
+                    Work_Mixed: "#A6857F",
+                    Work_Sheet: "#702A53",
+                    Search_Mixed: "#788D85",
+                    Search_GAI: "#192631",
+                    Search_Browser: "#5A5B39"
+                };
 
                 const svg = d3.select("svg")
                     .attr("width", width + margin.left + margin.right)
@@ -67,7 +72,7 @@
                     .append("path")
                     .attr("class", "area")
                     .attr("d", area)
-                    .style("fill", d => color(d.key))
+                    .style("fill", d => color[d.key])
                     .on("mousemove", (event, d) => {
                         const [xPos, yPos] = d3.pointer(event);
                         const seqIndex = Math.round(x.invert(xPos));
@@ -94,7 +99,7 @@
                     legendRow.append("rect")
                         .attr("width", 15)
                         .attr("height", 15)
-                        .attr("fill", color(key));
+                        .attr("fill", color[key]);
 
                     legendRow.append("text")
                         .attr("x", 20)
